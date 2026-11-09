@@ -1,0 +1,21 @@
+{
+  "_note": "교육용 더미 데이터입니다.",
+  "deploys": {
+    "payment-api": [
+      {"version": "v2.14.1", "at": "2026-08-11T02:58:00+09:00", "by": "pay-be"},
+      {"version": "v2.14.0", "at": "2026-08-08T14:20:00+09:00", "by": "pay-be"}
+    ],
+    "auth-service": [
+      {"version": "v1.9.3", "at": "2026-08-05T11:00:00+09:00", "by": "iam"}
+    ]
+  },
+  "logs": {
+    "payment-api@2026-08-11T02:58:00+09:00": "ERROR NullPointerException at PaymentValidator.java:88 (x1243)\nWARN circuit breaker open for ledger-api",
+    "payment-api@default": "INFO health check ok",
+    "auth-service@default": "INFO token issued x9821"
+  },
+  "metrics": {
+    "payment-api": {"error_rate_5m": 0.124, "p99_latency_ms": 3400, "cpu": 0.42},
+    "auth-service": {"error_rate_5m": 0.001, "p99_latency_ms": 180, "cpu": 0.30}
+  }
+}

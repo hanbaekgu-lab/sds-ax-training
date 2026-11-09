@@ -1,0 +1,10 @@
+{
+  "title": "Day 5 — 승인 게이트와 가드레일",
+  "status": "active",
+  "max_score": 10,
+  "pass_score": 7,
+  "parts": {
+    "basic": 7,
+    "advanced": 3
+  }
+}

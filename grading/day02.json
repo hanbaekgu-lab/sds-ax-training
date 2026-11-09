@@ -1,0 +1,10 @@
+{
+  "title": "Day 2 — 런북 RAG와 평가셋",
+  "status": "active",
+  "max_score": 10,
+  "pass_score": 7,
+  "parts": {
+    "basic": 7,
+    "advanced": 3
+  }
+}

@@ -1,0 +1,94 @@
+# 이 워크플로 결과는 자가 확인용이며 공식 점수가 아닙니다.
+# 공식 점수는 `[제출] DayN` 커밋을 push했을 때 별도 채점 파이프라인이 산출합니다.
+
+name: 자가 확인 (공식 점수 아님)
+
+on:
+  push:
+    branches: ["**"]
+  workflow_dispatch:
+    inputs:
+      day:
+        description: "확인할 Day"
+        required: true
+        default: "all"
+        type: choice
+        options: [all, day01, day02, day03, day04, day05, day06, day07]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: selfcheck-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  detect-days:
+    name: 변경된 Day 확인
+    runs-on: ubuntu-latest
+    outputs:
+      days: ${{ steps.detect.outputs.days }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 확인 대상 계산
+        id: detect
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          SELECTED_DAY: ${{ inputs.day }}
+          BEFORE_SHA: ${{ github.event.before }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
+            if [[ "$SELECTED_DAY" == "all" ]]; then
+              days=$(printf '%02d\n' {1..7})
+            else
+              days="${SELECTED_DAY#day}"
+            fi
+          elif [[ -n "${BEFORE_SHA:-}" && ! "$BEFORE_SHA" =~ ^0+$ ]]; then
+            changed=$(git diff --name-only "$BEFORE_SHA" "${{ github.sha }}" || true)
+            days=$(printf '%s\n' "$changed" | sed -nE 's#^day(0[1-7])/.*#\1#p' | sort -u)
+          else
+            days=$(printf '%02d\n' {1..7})
+          fi
+
+          days_json=$(printf '%s\n' "$days" | jq -R -s -c 'split("\n") | map(select(length > 0))')
+          echo "days=$days_json" >> "$GITHUB_OUTPUT"
+          echo "확인 대상: $days_json"
+
+  self-check:
+    name: Day ${{ matrix.day }} 자가 확인
+    needs: detect-days
+    if: needs.detect-days.outputs.days != '[]'
+    runs-on: ubuntu-latest
+    continue-on-error: true      # 자가 확인이므로 실패해도 워크플로를 빨갛게 만들지 않습니다
+    strategy:
+      fail-fast: false
+      matrix:
+        day: ${{ fromJSON(needs.detect-days.outputs.days) }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: 의존성 설치
+        run: python -m pip install -r requirements.txt
+
+      - name: 자가 확인 실행
+        run: python scripts/grade.py --day "${{ matrix.day }}" --force
+
+      - name: 안내
+        if: always()
+        run: |
+          echo "### ⚠️ 이 결과는 공식 점수가 아닙니다" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "공식 점수는 \`[제출] Day${{ matrix.day }}\` 커밋을 push했을 때" >> "$GITHUB_STEP_SUMMARY"
+          echo "별도 채점 파이프라인이 산출합니다. 여기 통과가 만점을 보장하지 않습니다." >> "$GITHUB_STEP_SUMMARY"

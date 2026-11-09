@@ -1,0 +1,10 @@
+{
+  "title": "Day 6 — Supervisor 인시던트 대응팀",
+  "status": "active",
+  "max_score": 10,
+  "pass_score": 7,
+  "parts": {
+    "basic": 7,
+    "advanced": 3
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "title": "Day 4 — 운영 지원 MCP 서버와 장애 복구",
+  "status": "active",
+  "max_score": 10,
+  "pass_score": 7,
+  "parts": {
+    "basic": 7,
+    "advanced": 3
+  }
+}

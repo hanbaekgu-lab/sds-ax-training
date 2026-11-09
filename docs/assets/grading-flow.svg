@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1084 330" width="1084" height="330" role="img" aria-label="제출과 채점 흐름, 배점 구조">
+  <style>
+    .fnt { font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", "Segoe UI", sans-serif; }
+    .title { font-size: 21px; font-weight: 700; fill: #57606a; }
+    .sub   { font-size: 13px; fill: #8b949e; }
+    .sect  { font-size: 13px; font-weight: 700; fill: #57606a; }
+    .note  { font-size: 12.5px; fill: #8b949e; }
+    .step  { font-size: 13.5px; font-weight: 700; fill: #24292f; }
+    .desc  { font-size: 11px; fill: #57606a; }
+    .code  { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace; font-size: 10.5px; fill: #57606a; }
+    .card  { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.5; }
+    .arrow { stroke: #8b949e; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .gate  { stroke: #24292f; stroke-width: 2; stroke-dasharray: 5 4; }
+    .gatetx { font-size: 12px; font-weight: 700; fill: #24292f; }
+    @media (prefers-color-scheme: dark) {
+      .title, .sect { fill: #e6edf3; }
+      .sub, .note { fill: #9198a1; }
+      .step { fill: #e6edf3; }
+      .desc, .code { fill: #9198a1; }
+      .card { fill: #161b22; stroke: #30363d; }
+      .arrow { stroke: #9198a1; }
+      .gate { stroke: #e6edf3; }
+      .gatetx { fill: #e6edf3; }
+    }
+  </style>
+
+  <text class="fnt title" x="16" y="28">제출과 채점</text>
+  <text class="fnt sub" x="16" y="50">자가 확인은 공개 부분집합입니다. 실제 채점은 여기 없는 변형 입력과 비공개 문항으로 한 번 더 확인합니다.</text>
+
+  <!-- ── pipeline ── -->
+  <g>
+    <rect class="card" x="12" y="76" width="188" height="80" rx="8"/>
+    <circle cx="34" cy="102" r="11" fill="#57606a"/>
+    <text class="fnt" x="34" y="106" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+    <text class="fnt step" x="54" y="106">미션 읽기</text>
+    <text class="fnt code" x="26" y="130">dayNN/README.md</text>
+    <text class="fnt desc" x="26" y="146">채점 기준이 표로 있습니다</text>
+  </g>
+
+  <g>
+    <rect class="card" x="230" y="76" width="188" height="80" rx="8"/>
+    <circle cx="252" cy="102" r="11" fill="#57606a"/>
+    <text class="fnt" x="252" y="106" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+    <text class="fnt step" x="272" y="106">TODO 채우기</text>
+    <text class="fnt code" x="244" y="130">starter/submission.py</text>
+    <text class="fnt desc" x="244" y="146">이름·인자를 바꾸지 않습니다</text>
+  </g>
+
+  <g>
+    <rect class="card" x="448" y="76" width="188" height="80" rx="8"/>
+    <circle cx="470" cy="102" r="11" fill="#0969da"/>
+    <text class="fnt" x="470" y="106" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+    <text class="fnt step" x="490" y="106">자가 확인</text>
+    <text class="fnt code" x="462" y="130">python grade.py --day N</text>
+    <text class="fnt desc" x="462" y="146">여기서 실패하면 채점도 실패</text>
+  </g>
+
+  <g>
+    <rect class="card" x="666" y="76" width="188" height="80" rx="8"/>
+    <circle cx="688" cy="102" r="11" fill="#1a7f37"/>
+    <text class="fnt" x="688" y="106" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+    <text class="fnt step" x="708" y="106">커밋 &amp; push</text>
+    <text class="fnt code" x="680" y="130">git commit -m "[제출] DayN"</text>
+    <text class="fnt desc" x="680" y="146">이 형식이어야 채점됩니다</text>
+  </g>
+
+  <g>
+    <rect class="card" x="884" y="76" width="188" height="80" rx="8"/>
+    <circle cx="906" cy="102" r="11" fill="#8250df"/>
+    <text class="fnt" x="906" y="106" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+    <text class="fnt step" x="926" y="106">자동 채점</text>
+    <text class="fnt code" x="898" y="130">비공개 문항 + 변형 입력</text>
+    <text class="fnt desc" x="898" y="146">결과가 코멘트로 돌아옵니다</text>
+  </g>
+
+  <path class="arrow" d="M206 116 h6 m-1 0 l-5 -5 m5 5 l-5 5"/>
+  <path class="arrow" d="M424 116 h6 m-1 0 l-5 -5 m5 5 l-5 5"/>
+  <path class="arrow" d="M642 116 h6 m-1 0 l-5 -5 m5 5 l-5 5"/>
+  <path class="arrow" d="M860 116 h6 m-1 0 l-5 -5 m5 5 l-5 5"/>
+
+  <!-- ── score bar ── -->
+  <text class="fnt sect" x="16" y="200">배점. 기초 7점이 통과선이고, 심화 3점은 통과 여부를 바꾸지 않습니다</text>
+
+  <rect x="16" y="216" width="740" height="46" rx="6" fill="#1a7f37"/>
+  <text class="fnt" x="36" y="236" font-size="14" font-weight="700" fill="#ffffff">기초 파트 · 7점</text>
+  <text class="fnt" x="36" y="253" font-size="11" fill="#ffffff" opacity="0.8">교안을 따라왔으면 통과합니다. 여기가 수료를 결정합니다.</text>
+
+  <rect x="760" y="216" width="308" height="46" rx="6" fill="#bf8700"/>
+  <text class="fnt" x="780" y="236" font-size="14" font-weight="700" fill="#ffffff">심화 파트 · 3점</text>
+  <text class="fnt" x="780" y="253" font-size="11" fill="#ffffff" opacity="0.8">못 해도 과제는 통과합니다.</text>
+
+  <line class="gate" x1="758" y1="206" x2="758" y2="278"/>
+  <text class="fnt gatetx" x="752" y="278" text-anchor="end">◀ 통과선 7점</text>
+
+  <text class="fnt note" x="16" y="304">기본 실습 과제 Day1~7 각 10점 = 70점 · Mini PJT 20점 · 출석 10점. 수료선 80점. 부분점수는 없고 과제 미제출은 1회라도 미수료입니다.</text>
+</svg>

@@ -1,0 +1,10 @@
+{
+  "title": "Day 7 — 계측과 누적 평가",
+  "status": "active",
+  "max_score": 10,
+  "pass_score": 7,
+  "parts": {
+    "basic": 7,
+    "advanced": 3
+  }
+}

@@ -1,0 +1,20 @@
+# ── 채점 실행 ──────────────────────────────────────────────
+pytest>=8.4
+
+# ── 과정 공통 스택 (Amazon Bedrock) ────────────────────────
+langchain>=0.3
+langchain-text-splitters>=0.3
+langchain-core>=0.3
+langchain-aws>=0.2
+langgraph>=0.2
+langgraph-supervisor>=0.0.9
+langchain-mcp-adapters>=0.1
+fastmcp>=2.0
+python-dotenv>=1.0
+pydantic>=2.7
+
+# ── RAG ────────────────────────────────────────────────────
+chromadb>=0.5
+langchain-chroma>=0.1
+rank-bm25>=0.2
+kiwipiepy>=0.17

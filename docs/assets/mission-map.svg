@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1084 424" width="1084" height="424" role="img" aria-label="SDS AX Day 1~7 미션 맵">
+  <style>
+    .fnt { font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", "Segoe UI", sans-serif; }
+    .title { font-size: 21px; font-weight: 700; fill: #57606a; }
+    .sub   { font-size: 13px; fill: #8b949e; }
+    .sect  { font-size: 13px; font-weight: 700; fill: #57606a; }
+    .note  { font-size: 12.5px; fill: #8b949e; }
+    .code  { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace; font-size: 12.5px; fill: #8b949e; }
+    .chev  { stroke: #8b949e; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    @media (prefers-color-scheme: dark) {
+      .title, .sect { fill: #e6edf3; }
+      .sub, .note, .code { fill: #9198a1; }
+      .chev { stroke: #9198a1; }
+    }
+  </style>
+
+  <text class="fnt title" x="16" y="28">SDS AX 실습 과제 · Day 1~7 미션 맵</text>
+  <text class="fnt sub" x="16" y="50">매일 같은 시스템의 한 층을 쌓습니다. 기초 7점 + 심화 3점, 통과선 7점.</text>
+
+  <!-- ── Day cards ── -->
+  <g>
+    <rect x="16" y="76" width="140" height="112" rx="8" fill="#1a7f37"/>
+    <text class="fnt" x="30" y="102" font-size="12" fill="#ffffff" opacity="0.72">Day 1</text>
+    <text class="fnt" x="30" y="128" font-size="14.5" font-weight="700" fill="#ffffff">알람 트리아지</text>
+    <text class="fnt" x="30" y="150" font-size="10.5" fill="#ffffff" opacity="0.78">체인 · 스키마</text>
+    <text class="fnt" x="30" y="170" font-size="10.5" fill="#ffffff" opacity="0.78">병렬 조립</text>
+  </g>
+  <g>
+    <rect x="168" y="76" width="140" height="112" rx="8" fill="#1a7f37"/>
+    <text class="fnt" x="182" y="102" font-size="12" fill="#ffffff" opacity="0.72">Day 2</text>
+    <text class="fnt" x="182" y="128" font-size="14.5" font-weight="700" fill="#ffffff">런북 RAG</text>
+    <text class="fnt" x="182" y="150" font-size="10.5" fill="#ffffff" opacity="0.78">검색 · 출처</text>
+    <text class="fnt" x="182" y="170" font-size="10.5" fill="#ffffff" opacity="0.78">평가셋 시작</text>
+  </g>
+  <g>
+    <rect x="320" y="76" width="140" height="112" rx="8" fill="#0969da"/>
+    <text class="fnt" x="334" y="102" font-size="12" fill="#ffffff" opacity="0.72">Day 3</text>
+    <text class="fnt" x="334" y="128" font-size="14.5" font-weight="700" fill="#ffffff">조사 Agent</text>
+    <text class="fnt" x="334" y="150" font-size="10.5" fill="#ffffff" opacity="0.78">도구 · 순환</text>
+    <text class="fnt" x="334" y="170" font-size="10.5" fill="#ffffff" opacity="0.78">모델이 결정</text>
+  </g>
+  <g>
+    <rect x="472" y="76" width="140" height="112" rx="8" fill="#0969da"/>
+    <text class="fnt" x="486" y="102" font-size="12" fill="#ffffff" opacity="0.72">Day 4</text>
+    <text class="fnt" x="486" y="128" font-size="14.5" font-weight="700" fill="#ffffff">MCP 서버</text>
+    <text class="fnt" x="486" y="150" font-size="10.5" fill="#ffffff" opacity="0.78">표준 노출</text>
+    <text class="fnt" x="486" y="170" font-size="10.5" fill="#ffffff" opacity="0.78">장애 복구</text>
+  </g>
+  <g>
+    <rect x="624" y="76" width="140" height="112" rx="8" fill="#9a6700"/>
+    <text class="fnt" x="638" y="102" font-size="12" fill="#ffffff" opacity="0.72">Day 5</text>
+    <text class="fnt" x="638" y="128" font-size="14.5" font-weight="700" fill="#ffffff">승인 게이트</text>
+    <text class="fnt" x="638" y="150" font-size="10.5" fill="#ffffff" opacity="0.78">가드레일</text>
+    <text class="fnt" x="638" y="170" font-size="10.5" fill="#ffffff" opacity="0.78">차단 · 승인</text>
+  </g>
+  <g>
+    <rect x="776" y="76" width="140" height="112" rx="8" fill="#8250df"/>
+    <text class="fnt" x="790" y="102" font-size="12" fill="#ffffff" opacity="0.72">Day 6</text>
+    <text class="fnt" x="790" y="128" font-size="14.5" font-weight="700" fill="#ffffff">Supervisor</text>
+    <text class="fnt" x="790" y="150" font-size="10.5" fill="#ffffff" opacity="0.78">3-Agent 통합</text>
+    <text class="fnt" x="790" y="170" font-size="10.5" fill="#ffffff" opacity="0.78">라우팅 · 격리</text>
+  </g>
+  <g>
+    <rect x="928" y="76" width="140" height="112" rx="8" fill="#8250df"/>
+    <text class="fnt" x="942" y="102" font-size="12" fill="#ffffff" opacity="0.72">Day 7</text>
+    <text class="fnt" x="942" y="128" font-size="14.5" font-weight="700" fill="#ffffff">계측과 평가</text>
+    <text class="fnt" x="942" y="150" font-size="10.5" fill="#ffffff" opacity="0.78">누적 실행</text>
+    <text class="fnt" x="942" y="170" font-size="10.5" fill="#ffffff" opacity="0.78">회귀 탐지</text>
+  </g>
+
+  <!-- ── chevrons between cards ── -->
+  <path class="chev" d="M158 127 l5 5 -5 5"/>
+  <path class="chev" d="M310 127 l5 5 -5 5"/>
+  <path class="chev" d="M462 127 l5 5 -5 5"/>
+  <path class="chev" d="M614 127 l5 5 -5 5"/>
+  <path class="chev" d="M766 127 l5 5 -5 5"/>
+  <path class="chev" d="M918 127 l5 5 -5 5"/>
+
+  <!-- ── 심화 strip ── -->
+  <g>
+    <rect x="16"  y="202" width="140" height="46" rx="6" fill="#bf8700"/>
+    <text class="fnt" x="30"  y="220" font-size="10" fill="#ffffff" opacity="0.75">심화 +3</text>
+    <text class="fnt" x="30"  y="238" font-size="12" font-weight="600" fill="#ffffff">결정적 규칙</text>
+  </g>
+  <g>
+    <rect x="168" y="202" width="140" height="46" rx="6" fill="#bf8700"/>
+    <text class="fnt" x="182" y="220" font-size="10" fill="#ffffff" opacity="0.75">심화 +3</text>
+    <text class="fnt" x="182" y="238" font-size="12" font-weight="600" fill="#ffffff">검색 품질 판정</text>
+  </g>
+  <g>
+    <rect x="320" y="202" width="140" height="46" rx="6" fill="#bf8700"/>
+    <text class="fnt" x="334" y="220" font-size="10" fill="#ffffff" opacity="0.75">심화 +3</text>
+    <text class="fnt" x="334" y="238" font-size="12" font-weight="600" fill="#ffffff">호출 예산</text>
+  </g>
+  <g>
+    <rect x="472" y="202" width="140" height="46" rx="6" fill="#bf8700"/>
+    <text class="fnt" x="486" y="220" font-size="10" fill="#ffffff" opacity="0.75">심화 +3</text>
+    <text class="fnt" x="486" y="238" font-size="12" font-weight="600" fill="#ffffff">오류 분류</text>
+  </g>
+  <g>
+    <rect x="624" y="202" width="140" height="46" rx="6" fill="#bf8700"/>
+    <text class="fnt" x="638" y="220" font-size="10" fill="#ffffff" opacity="0.75">심화 +3</text>
+    <text class="fnt" x="638" y="238" font-size="12" font-weight="600" fill="#ffffff">위험도 정책</text>
+  </g>
+  <g>
+    <rect x="776" y="202" width="140" height="46" rx="6" fill="#bf8700"/>
+    <text class="fnt" x="790" y="220" font-size="10" fill="#ffffff" opacity="0.75">심화 +3</text>
+    <text class="fnt" x="790" y="238" font-size="12" font-weight="600" fill="#ffffff">출력 게이팅</text>
+  </g>
+  <g>
+    <rect x="928" y="202" width="140" height="46" rx="6" fill="#bf8700"/>
+    <text class="fnt" x="942" y="220" font-size="10" fill="#ffffff" opacity="0.75">심화 +3</text>
+    <text class="fnt" x="942" y="238" font-size="12" font-weight="600" fill="#ffffff">회귀 비교</text>
+  </g>
+
+  <!-- ── 관통 산출물 ── -->
+  <text class="fnt sect" x="16" y="292">관통하는 산출물. 하루짜리 과제가 아닙니다</text>
+
+  <rect x="16" y="304" width="10" height="10" rx="2" fill="#1a7f37"/>
+  <text class="fnt note" x="34" y="313">
+    <tspan class="code">eval_set.json</tspan><tspan xml:space="preserve">  ·  Day2에서 5문항으로 태어나 Day3~6에서 누적, Day7에서 12문항 이상으로 전체 실행됩니다.</tspan>
+  </text>
+
+  <rect x="16" y="328" width="10" height="10" rx="2" fill="#0969da"/>
+  <text class="fnt note" x="34" y="337">
+    <tspan class="code">chroma_db/</tspan><tspan xml:space="preserve"> · </tspan><tspan class="code">mcp_server.py</tspan><tspan xml:space="preserve">  ·  Day2의 검색과 Day4의 도구가 Day6 Supervisor의 실제 도구가 됩니다.</tspan>
+  </text>
+
+  <rect x="16" y="352" width="10" height="10" rx="2" fill="#bf8700"/>
+  <text class="fnt note" x="34" y="361">심화 7개는 주제가 같습니다. LLM 판단을 그대로 믿지 않고 결정적 코드로 검증합니다. LLM 호출 0회, 상수 반환이면 실패합니다.</text>
+
+  <rect x="16" y="376" width="10" height="10" rx="2" fill="#8250df"/>
+  <text class="fnt note" x="34" y="385">Day8~10 Mini PJT는 위 7일치 코드를 그대로 재료로 씁니다. 심화를 해 둔 사람은 이때 시간을 법니다.</text>
+</svg>

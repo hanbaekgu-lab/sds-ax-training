@@ -1,0 +1,19 @@
+[project]
+name = "sds-ax-training"
+version = "0.1.0"
+description = "SDS AX 10일 교육 및 자동 채점 템플릿"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "pytest>=8.4,<9",
+]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+markers = [
+    "points(value): 테스트 통과 시 부여할 점수",
+    "advanced: 심화 파트. 통과 판정에 포함하지 않음",
+]
+testpaths = [
+    "day01/tests", "day02/tests", "day03/tests", "day04/tests",
+    "day05/tests", "day06/tests", "day07/tests",
+]

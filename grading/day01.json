@@ -1,0 +1,10 @@
+{
+  "title": "Day 1 — 운영 알람 트리아지 체인",
+  "status": "active",
+  "max_score": 10,
+  "pass_score": 7,
+  "parts": {
+    "basic": 7,
+    "advanced": 3
+  }
+}

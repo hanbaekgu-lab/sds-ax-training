@@ -1,0 +1,14 @@
+# 채점 인프라 변경은 저장소 관리자의 검토를 받습니다.
+/.github/ @gio155
+/grading/ @gio155
+/scripts/ @gio155
+/day01/tests/ @gio155
+/day02/tests/ @gio155
+/day03/tests/ @gio155
+/day04/tests/ @gio155
+/day05/tests/ @gio155
+/day06/tests/ @gio155
+/day07/tests/ @gio155
+/day08/tests/ @gio155
+/day09/tests/ @gio155
+/day10/tests/ @gio155

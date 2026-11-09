@@ -1,0 +1,9 @@
+[
+  {
+    "id": "d2-01",
+    "question": "여기에 문서에 그대로 적힌 내용을 묻는 질문을 쓰세요",
+    "type": "fact",
+    "expected_source": "leave_policy.md",
+    "_comment": "TODO 과제 중 필요 시 question 항목을 변경해주시거나 eval 케이스를 추가해주세요."
+  }
+]

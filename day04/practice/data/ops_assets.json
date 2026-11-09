@@ -1,0 +1,27 @@
+{
+  "_note": "교육용 더미 데이터입니다.",
+  "runbooks": {
+    "5xx": "1) 최근 30분 배포 이력 확인 2) 의존 서비스 상태 확인 3) DB 커넥션 풀 확인",
+    "oom": "1) 힙 덤프 확보 2) 최근 메모리 설정 변경 확인 3) 롤백 검토",
+    "cert": "1) 만료일 확인 2) 갱신 파이프라인 상태 확인 3) 수동 갱신 절차 수행"
+  },
+  "owners": {
+    "payment-api": {"team": "pay-be", "oncall": "김온콜", "slack": "#pay-be-alert"},
+    "auth-service": {"team": "iam", "oncall": "이보안", "slack": "#iam-alert"},
+    "gateway": {"team": "platform", "oncall": "박게이트", "slack": "#platform-alert"}
+  },
+  "incidents": {
+    "payment-api": [
+      {"id": "INC-2026-0731", "title": "결제 승인 지연", "cause": "ledger-api 타임아웃", "at": "2026-07-31"},
+      {"id": "INC-2026-0612", "title": "5xx 급증", "cause": "배포 회귀", "at": "2026-06-12"}
+    ],
+    "auth-service": [
+      {"id": "INC-2026-0505", "title": "토큰 검증 실패", "cause": "인증서 만료", "at": "2026-05-05"}
+    ]
+  },
+  "assets": {
+    "SRV-001": {"name": "payment-api-prod-01", "status": "running", "owner": "pay-be"},
+    "SRV-002": {"name": "auth-service-prod-01", "status": "degraded", "owner": "iam"},
+    "SRV-003": {"name": "gateway-prod-01", "status": "running", "owner": "platform"}
+  }
+}
