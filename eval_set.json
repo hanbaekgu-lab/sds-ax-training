@@ -1,9 +1,50 @@
 [
   {
     "id": "d2-01",
-    "question": "여기에 문서에 그대로 적힌 내용을 묻는 질문을 쓰세요",
+    "question": "연차는 며칠까지 다음 해로 이월되나요?",
     "type": "fact",
-    "expected_source": "leave_policy.md",
-    "_comment": "TODO 과제 중 필요 시 question 항목을 변경해주시거나 eval 케이스를 추가해주세요."
+    "expected_source": "leave_policy.md"
+  },
+  {
+    "id": "d2-02",
+    "question": "남은 휴가를 내년에 쓸 수 있나요?",
+    "type": "paraphrase",
+    "expected_source": "leave_policy.md"
+  },
+  {
+    "id": "d2-03",
+    "question": "오류율이 얼마나 지속되면 롤백하나요?",
+    "type": "fact",
+    "expected_source": "incident_runbook.md"
+  },
+  {
+    "id": "d2-04",
+    "question": "배포하고 나서 에러가 계속 나는데 이전 버전으로 되돌려도 되나요?",
+    "type": "paraphrase",
+    "expected_source": "incident_runbook.md"
+  },
+  {
+    "id": "d2-05",
+    "question": "온콜 1차 담당자가 15분 내 응답하지 않으면 어떻게 되나요?",
+    "type": "fact",
+    "expected_source": "oncall_policy.md"
+  },
+  {
+    "id": "d2-06",
+    "question": "밤에 호출 받아서 대응했으면 다음 날 늦게 출근해도 되나요?",
+    "type": "paraphrase",
+    "expected_source": "oncall_policy.md"
+  },
+  {
+    "id": "d2-07",
+    "question": "사내 헬스장 운영 시간은?",
+    "type": "no_answer",
+    "expected_source": null
+  },
+  {
+    "id": "d2-08",
+    "question": "법인카드 한도는 얼마인가요?",
+    "type": "no_answer",
+    "expected_source": null
   }
 ]
