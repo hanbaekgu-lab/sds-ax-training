@@ -46,5 +46,52 @@
     "question": "법인카드 한도는 얼마인가요?",
     "type": "no_answer",
     "expected_source": null
+  },
+  {
+    "id": "d3-01",
+    "question": "ReAct 루프가 무엇인가요?",
+    "type": "no_tool",
+    "expected_tools": []
+  },
+  {
+    "id": "d3-02",
+    "question": "HTTP 5xx 상태코드는 어떤 의미인가요?",
+    "type": "no_tool",
+    "expected_tools": []
+  },
+  {
+    "id": "d3-03",
+    "question": "payment-api의 현재 p99 지연은 얼마인가요?",
+    "type": "single_tool",
+    "expected_tools": [
+      "get_metrics"
+    ]
+  },
+  {
+    "id": "d3-04",
+    "question": "auth-service에 마지막으로 배포된 버전은?",
+    "type": "single_tool",
+    "expected_tools": [
+      "get_deploy_history"
+    ]
+  },
+  {
+    "id": "d3-05",
+    "question": "payment-api 최근 배포 직후에 어떤 에러가 찍혔나요?",
+    "type": "multi_tool",
+    "expected_tools": [
+      "get_deploy_history",
+      "get_logs"
+    ]
+  },
+  {
+    "id": "d3-06",
+    "question": "8월 11일 새벽 payment-api 5xx 급증 원인을 조사해 주세요.",
+    "type": "multi_tool",
+    "expected_tools": [
+      "get_deploy_history",
+      "get_logs",
+      "get_metrics"
+    ]
   }
 ]
