@@ -93,5 +93,48 @@
       "get_logs",
       "get_metrics"
     ]
+  },
+  {
+    "id": "d4-01",
+    "question": "SRV-001 자산 상태를 알려 주세요. (자산 조회 백엔드가 계속 타임아웃되는 상황)",
+    "type": "tool_recovery",
+    "expected_tools": [
+      "get_asset_status",
+      "get_asset_status_backup"
+    ],
+    "failure": "timeout",
+    "expected_behavior": "재시도 2~3회 후 대체 경로로 넘어가고, 답에 캐시 값임을 밝힌다"
+  },
+  {
+    "id": "d4-02",
+    "question": "SRV-002 자산 상태를 알려 주세요. (백엔드 응답에 status 필드가 빠지는 상황)",
+    "type": "tool_recovery",
+    "expected_tools": [
+      "get_asset_status",
+      "get_asset_status_backup"
+    ],
+    "failure": "schema_error",
+    "expected_behavior": "재시도하지 않고 즉시 대체 경로로 넘어간다 (백엔드 호출 1회)"
+  },
+  {
+    "id": "d4-03",
+    "question": "SRV-003 자산 상태를 알려 주세요. (첫 호출만 타임아웃되고 두 번째에 복구되는 상황)",
+    "type": "tool_recovery",
+    "expected_tools": [
+      "get_asset_status"
+    ],
+    "failure": "timeout_once",
+    "expected_behavior": "재시도로 살아난 기본 조회 값을 쓰고 대체 경로로 넘어가지 않는다"
+  },
+  {
+    "id": "d4-04",
+    "question": "SRV-001 자산 상태를 알려 주세요. (백엔드가 429 Too Many Requests를 돌려주는 상황)",
+    "type": "tool_recovery",
+    "expected_tools": [
+      "get_asset_status",
+      "get_asset_status_backup"
+    ],
+    "failure": "rate_limit",
+    "expected_behavior": "간격을 늘려 재시도하되 MAX_RETRIES 안에서 멈추고 대체 경로로 넘어간다"
   }
 ]
